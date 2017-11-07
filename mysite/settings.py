@@ -25,7 +25,7 @@ SECRET_KEY = 'd@uu@euo!32ot3t+i%#5cer=4d4(8m5w3_*hp%u6n9=1be+g&o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['djangofordummies.pythonanywhere.com']
 
 
 # Application definition
