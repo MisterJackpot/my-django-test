@@ -2,13 +2,27 @@
 
 {% block content %}
     {% for post in posts %}
-        <div class="post">
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <div class="date">
-                <p>published: {{ post.published_date }}</p>
+        <section id="one" class="wrapper style2">
+            <div class="inner">
+                <div>
+                    <div class="box">
+                        {% if post.image %}
+                            <div class="image fit">
+                                <img src="{{ post.image }}" alt="" />
+                            </div>
+                        {% endif %}
+                        <div class="content">
+                            <header class="align-center">
+                                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                                <p>published: {{ post.published_date }}</p>
+                            </header>
+                            <hr />
+                            <p>{{ post.text|linebreaksbr }}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>{{ post.text|linebreaksbr }}</p>
-        </div>
+        </section>
     {% endfor %}
 {% endblock %}
 
